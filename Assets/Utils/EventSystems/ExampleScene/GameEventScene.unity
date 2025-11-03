@@ -119,6 +119,42 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &1069043
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1069044}
+  m_Layer: 0
+  m_Name: Listeners
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1069044
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1069043}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1403008565}
+  - {fileID: 1120986532}
+  - {fileID: 1493585417}
+  - {fileID: 1893161698}
+  - {fileID: 636912376}
+  m_Father: {fileID: 1969739811}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,13 +383,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 410087039}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: 0.42261827, y: 0, z: 0, w: 0.9063079}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1224323071}
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 50, y: 0, z: 0}
 --- !u!114 &410087042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -411,7 +447,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1928795593}
+  m_Father: {fileID: 1969739811}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &434798325
 MonoBehaviour:
@@ -580,9 +616,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 470723247}
-        m_TargetAssemblyTypeName: ListenerExES, Assembly-CSharp
+        m_TargetAssemblyTypeName: ListenerEx2ES, Assembly-CSharp
         m_MethodName: ChangeColor
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -674,7 +710,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 470723240}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c21e4768647e2d4da20157633dd8b63, type: 3}
+  m_Script: {fileID: 11500000, guid: 58fecefc1fb2b814aaa3d8dac92c2508, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &636912375
@@ -711,7 +747,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1928795593}
+  m_Father: {fileID: 1069044}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &636912377
 MonoBehaviour:
@@ -880,9 +916,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 640218953}
-        m_TargetAssemblyTypeName: ListenerExES, Assembly-CSharp
+        m_TargetAssemblyTypeName: ListenerEx2ES, Assembly-CSharp
         m_MethodName: ChangeColor
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -974,7 +1010,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 640218946}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c21e4768647e2d4da20157633dd8b63, type: 3}
+  m_Script: {fileID: 11500000, guid: 58fecefc1fb2b814aaa3d8dac92c2508, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &832575517
@@ -1079,9 +1115,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 833341645}
-        m_TargetAssemblyTypeName: ListenerExES, Assembly-CSharp
+        m_TargetAssemblyTypeName: ListenerEx2ES, Assembly-CSharp
         m_MethodName: ChangeColor
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1173,7 +1209,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 833341638}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c21e4768647e2d4da20157633dd8b63, type: 3}
+  m_Script: {fileID: 11500000, guid: 58fecefc1fb2b814aaa3d8dac92c2508, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &936315848
@@ -1319,7 +1355,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1928795593}
+  m_Father: {fileID: 1069044}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1120986533
 MonoBehaviour:
@@ -1465,7 +1501,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1463798893}
+  m_Father: {fileID: 1969739811}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1221130712
 MonoBehaviour:
@@ -1567,9 +1603,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1327128554}
-        m_TargetAssemblyTypeName: ListenerExES, Assembly-CSharp
+        m_TargetAssemblyTypeName: ListenerEx2ES, Assembly-CSharp
         m_MethodName: ChangeColor
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1661,7 +1697,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1327128547}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c21e4768647e2d4da20157633dd8b63, type: 3}
+  m_Script: {fileID: 11500000, guid: 58fecefc1fb2b814aaa3d8dac92c2508, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1403008564
@@ -1698,7 +1734,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1928795593}
+  m_Father: {fileID: 1069044}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1403008566
 MonoBehaviour:
@@ -1844,10 +1880,42 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 936315849}
-  - {fileID: 1221130711}
+  - {fileID: 1969739811}
+  - {fileID: 1491387672}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1491387671
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1491387672}
+  m_Layer: 0
+  m_Name: Color
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1491387672
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491387671}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
   - {fileID: 1557396964}
   - {fileID: 1928795593}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1463798893}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1493585416
 GameObject:
@@ -1883,7 +1951,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1928795593}
+  m_Father: {fileID: 1069044}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1493585418
 MonoBehaviour:
@@ -2029,7 +2097,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1463798893}
+  m_Father: {fileID: 1491387672}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1557396965
 MonoBehaviour:
@@ -2040,7 +2108,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1557396963}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d76ee4e10a32234e880bb3081b67c59, type: 3}
+  m_Script: {fileID: 11500000, guid: 2aa11394ea841a445aeb2a0be7d497a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   changeColorEvent: {fileID: 11400000, guid: aa724e0a2407b4540891776fa33493f4, type: 2}
@@ -2097,9 +2165,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1600307661}
-        m_TargetAssemblyTypeName: ListenerExES, Assembly-CSharp
+        m_TargetAssemblyTypeName: ListenerEx2ES, Assembly-CSharp
         m_MethodName: ChangeColor
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2191,7 +2259,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1600307654}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c21e4768647e2d4da20157633dd8b63, type: 3}
+  m_Script: {fileID: 11500000, guid: 58fecefc1fb2b814aaa3d8dac92c2508, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1863155376
@@ -2247,9 +2315,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1863155383}
-        m_TargetAssemblyTypeName: ListenerExES, Assembly-CSharp
+        m_TargetAssemblyTypeName: ListenerEx2ES, Assembly-CSharp
         m_MethodName: ChangeColor
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2341,7 +2409,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1863155376}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c21e4768647e2d4da20157633dd8b63, type: 3}
+  m_Script: {fileID: 11500000, guid: 58fecefc1fb2b814aaa3d8dac92c2508, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1893161697
@@ -2378,7 +2446,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1928795593}
+  m_Father: {fileID: 1069044}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1893161699
 MonoBehaviour:
@@ -2518,23 +2586,51 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1928795592}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 434798324}
-  - {fileID: 1403008565}
-  - {fileID: 1120986532}
-  - {fileID: 1493585417}
-  - {fileID: 1893161698}
-  - {fileID: 636912376}
   - {fileID: 1863155377}
   - {fileID: 640218947}
   - {fileID: 1327128548}
   - {fileID: 833341639}
   - {fileID: 1600307655}
   - {fileID: 470723241}
+  m_Father: {fileID: 1491387672}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1969739810
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1969739811}
+  m_Layer: 0
+  m_Name: RandomColor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1969739811
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969739810}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 434798324}
+  - {fileID: 1221130711}
+  - {fileID: 1069044}
   m_Father: {fileID: 1463798893}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
