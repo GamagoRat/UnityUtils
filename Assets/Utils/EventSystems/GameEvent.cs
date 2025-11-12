@@ -15,12 +15,10 @@ public class GameEvent : ScriptableObject
     [System.NonSerialized] // Avoid persistent ref between editor and runtime
     private readonly List<EventListener> listeners = new List<EventListener>(); // TODO use a hashSet instead of list for better performance ?
 
-
     public void RegisterListener(EventListener listener) 
     {
 
         if (listener == null) return;
-
         if (!listeners.Contains(listener))
             listeners.Add(listener);
     }
