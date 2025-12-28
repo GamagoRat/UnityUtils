@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class CustomAnimator : MonoBehaviour
@@ -9,16 +10,25 @@ public class CustomAnimator : MonoBehaviour
     private Animator animator;
     private string currentState;
     private float animationDelay;
+    private Dictionary<string, float> clipLengths;
 
     // Flags
     private bool isAttacking;
 
-    private void Start()
+    private void Awake()
     {
+        // Initialisation
+        clipLengths = new Dictionary<string, float>();
         animator = GetComponent<Animator>();
+
+        // Get the clips length
+        foreach (var clip in animator.runtimeAnimatorController.animationClips)
+            if (!clipLengths.ContainsKey(clip.name))
+                clipLengths.Add(clip.name, clip.length);
     }
 
     public void ChangeAnimationState(string newState) {
+
         // Early exit
         if (currentState == newState)
             return;
@@ -28,38 +38,25 @@ public class CustomAnimator : MonoBehaviour
         animator.Play(newState);
     }
 
-  
     public void Update()
     {
+        // === Looping Anims === 
         if (Input.GetKeyDown(KeyCode.B))
             ChangeAnimationState("BreathingIdle");
-
         if (Input.GetKeyDown(KeyCode.R))
             ChangeAnimationState("FastRun");
-
         if (Input.GetKeyDown(KeyCode.W))
             ChangeAnimationState("Walking");
         
-        if (!isAttacking && Input.GetKeyDown(KeyCode.Mouse0))
-        {
-
+        // === Attack ===
+        if (!isAttacking && Input.GetKeyDown(KeyCode.Mouse0)) {
             isAttacking = true;
             ChangeAnimationState("Attack");
 
             // Set up callback
-            animationDelay = animator.GetCurrentAnimatorStateInfo(0).length; // FIXME Doesn't work anymore as the animation change in the next frame
-            Invoke("AttackComplete", animationDelay);
-        }
-    }
-
-    // TODO NEED To change that to get the anim lenght instead of just debug
-    private void GetClipLength()
-    {
-        foreach (var clip in animator.runtimeAnimatorController.animationClips)
-        {
-            if (clip.name == "Attack")
-                Debug.Log(clip.length);
-        }
+            animationDelay = clipLengths["Attack"];  // TODO : That's where I wonder if, in a bigger system,
+            Invoke("AttackComplete", animationDelay);// it wouldn't be more worth it t oset up differently named delay and initialise them at awake
+        }                                            // instead of looking up, or better have some sort of data struct like scriptable object to manage that
     }
 
     private void AttackComplete() {
