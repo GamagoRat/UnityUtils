@@ -7,9 +7,9 @@ public class AnimData : ScriptableObject {
     public AnimID id;
     public AnimationClip clip;
 
-    [Header("Clip Infos")] // TODO : Should be readonly in editor but I don't want to have to create a property drawer right now
-    public string animatorStateName => clip != null ? clip.name : "";
-    public float duration => clip != null ? clip.length : 0f;
+    // Clip Infos
+    public string animatorStateName => clip != null ? clip.name : " "; // TODO/NOTE Could be improved on this point as the anim name must be 
+    public float duration => clip != null ? clip.length : 0f;          // the exact same that the state in the animator and discrepencies can appear if anims are renamed
 
     [Header("Flags")]
     public bool isCancellable;

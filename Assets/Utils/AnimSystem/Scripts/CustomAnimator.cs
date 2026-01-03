@@ -7,24 +7,17 @@ public class CustomAnimator : MonoBehaviour
     // Also the transitions between the animation pos are kinda violent because that's just random mixamo anims and not anims made to work together
 
     // Animation
+    public AnimDatabase animDB;
     private Animator animator;
     private string currentState;
     private float animationDelay;
-    private Dictionary<string, float> clipLengths;
 
     // Flags
     private bool isAttacking;
 
-    private void Awake()
-    {
-        // Initialisation
-        clipLengths = new Dictionary<string, float>();
+    private void Awake() {
         animator = GetComponent<Animator>();
-
-        // Get the clips length
-        foreach (var clip in animator.runtimeAnimatorController.animationClips)
-            if (!clipLengths.ContainsKey(clip.name))
-                clipLengths.Add(clip.name, clip.length);
+        animDB.Initialise();
     }
 
     public void ChangeAnimationState(string newState) {
@@ -42,21 +35,22 @@ public class CustomAnimator : MonoBehaviour
     {
         // === Looping Anims === 
         if (Input.GetKeyDown(KeyCode.B))
-            ChangeAnimationState("BreathingIdle");
+            ChangeAnimationState(animDB.Get(AnimID.BreathingIdle).name);
         if (Input.GetKeyDown(KeyCode.R))
-            ChangeAnimationState("FastRun");
+            ChangeAnimationState(animDB.Get(AnimID.FastRun).name);
         if (Input.GetKeyDown(KeyCode.W))
-            ChangeAnimationState("Walking");
+            ChangeAnimationState(animDB.Get(AnimID.Walking).name);
         
         // === Attack ===
         if (!isAttacking && Input.GetKeyDown(KeyCode.Mouse0)) {
             isAttacking = true;
-            ChangeAnimationState("Attack");
+            var attackAnim = animDB.Get(AnimID.Attack);
+            ChangeAnimationState(attackAnim.name);
 
             // Set up callback
-            animationDelay = clipLengths["Attack"];  // TODO : That's where I wonder if, in a bigger system,
-            Invoke("AttackComplete", animationDelay);// it wouldn't be more worth it t oset up differently named delay and initialise them at awake
-        }                                            // instead of looking up, or better have some sort of data struct like scriptable object to manage that
+            animationDelay = attackAnim.duration;
+            Invoke("AttackComplete", animationDelay);
+        }                                            
     }
 
     private void AttackComplete() {

@@ -16,5 +16,11 @@ public class AnimDatabase : ScriptableObject {
     }
 
     // Return the data of the anim passed as argument
-    public AnimData Get(AnimID id) { return cache[id]; }
+    public AnimData Get(AnimID id) { 
+        
+        // Security in case the DB wasn't initialised in the consumer
+        if (cache == null)
+            Initialise();
+
+        return cache[id]; }
 }
